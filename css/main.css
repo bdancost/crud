@@ -60,6 +60,15 @@ footer {
   }
 }
 
+@media (max-width: 680px) {
+  main {
+    width: 90%;
+    margin: 5vh auto;
+    padding: 10px;
+    box-shadow: none;
+  }
+}
+
 @media (max-width: 480px) {
   header {
     position: fixed;
