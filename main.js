@@ -19,6 +19,23 @@ const setLocalStorage = (dbClient) =>
 
 //CRUD - Create, Read, Update, Delete
 
+//CRUD DELETE
+const deleteClient = (index) => {
+  const dbClient = readClient();
+  dbClient.splice(index, 1);
+  setLocalStorage(dbClient);
+};
+
+//CRUD UPDATE
+const updateClient = (index, client) => {
+  const dbClient = readClient();
+  dbClient[index] = client;
+  setLocalStorage(dbClient);
+};
+
+//CRUD READ
+const readClient = () => getLocalStorage();
+
 //CRUD CREATE
 const createClient = (client) => {
   const dbClient = getLocalStorage();
@@ -26,8 +43,19 @@ const createClient = (client) => {
   setLocalStorage(dbClient);
 };
 
+const isValidFields = () => {};
+
+//Interação com o layout
+const salveClient = () => {
+  if (isValidFields()) {
+    console.log("Cadastrando cliente");
+  }
+};
+
 //Evento
 document
   .getElementById("cadastrarCliente")
   .addEventListener("click", openModal);
 document.getElementById("modalClose").addEventListener("click", closeModal);
+
+document.getElementById("salvar").addEventListener("clickk", salveClient);
