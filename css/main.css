@@ -63,7 +63,13 @@ footer {
 
   .button {
     width: 60%;
+    gap: 5px;
   }
+}
+
+#cadastrarCliente {
+  width: 25%;
+  border-radius: 5px;
 }
 
 @media (max-width: 680px) {
@@ -76,6 +82,7 @@ footer {
 
   .button {
     width: 50%;
+    gap: 5px;
   }
 }
 

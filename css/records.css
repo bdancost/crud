@@ -1,5 +1,11 @@
 .records {
   width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px var(--shadow-color);
+  margin-top: 20px;
+  position: relative;
   user-select: none;
   text-align: left;
 }
@@ -32,9 +38,48 @@
     width: 100px;
   }
 
+  .records th {
+    padding: 0;
+    min-width: 100px;
+    text-align: center;
+  }
+
+  .records td {
+    padding: 0;
+    min-width: 100px;
+    text-align: center;
+    gap: 10px;
+  }
+
   #cadastrarCliente {
     width: 40%;
     margin-top: 20px;
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 580px) {
+  .records {
+    min-width: 80px;
+    border-spacing: 5px;
+  }
+  .records tr {
+    box-shadow: 0 1px 3px var(--shadow-color);
+  }
+  .records th {
+    display: none;
+  }
+  .records td {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    gap: 10px;
+  }
+  .records td:not(:first-child) {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 10px;
   }
 }
 
