@@ -27,8 +27,14 @@
 }
 
 @media (max-width: 780px) {
-  .records th {
-    height: 40px;
+  .records {
+    border-spacing: 5px;
+    width: 100px;
+  }
+
+  #cadastrarCliente {
+    width: 40%;
+    margin-top: 20px;
   }
 }
 
